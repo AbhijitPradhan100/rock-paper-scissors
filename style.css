@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: monospace;
+  
+}
+
+body{
+    background:  url('versus-background.png');
+    background-size:  cover;
+}
+
+
+h1{
+    background-color: lightseagreen;
+    height: 3rem;
+    
+}
+.choice{
+    height: 165px;
+    width: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid lightseagreen;
+    transition: transform 0.2s ease-in-out;
+}
+
+.choice:hover img {
+    transform: scale(1.1);
+}
+
+.choices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+}
+
+#user-score,
+#comp-score{
+    font-size: 4rem;
+}
+
+.msg-container{
+    margin-top: 4.5rem;
+    
+}
+
+#msg{
+    background-color: lightseagreen;
+    font-size: 2rem;
+    padding: 1rem;
+    border: 2px solid black;
+    display: inline;
+}
+
+#user-side{
+    background-color: #FFCA00;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 125px;
+    width: 125px;
+}
+#comp-side{
+    background-color: #FF3D3D;
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 125px;
+    width: 125px;
+}
+
+#reset{
+    font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    
+}
+
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: lightseagreen;
+    border: 2px solid black;
+}
+
+/* media query */
+@media screen and (max-width: 768px) {
+    .choices {
+        flex-direction: column; 
+    }
+
+    .choice {
+        margin-bottom: 2rem; 
+    }
+
+    .scoreboard {
+        flex-direction: column; 
+        gap: 2rem;
+    }
+
+    #user-score,
+    #comp-score {
+        font-size: 3rem;
+    }
+
+    .msg-container {
+        margin-top: 3rem; 
+    }
+
+    footer {
+        font-size: 1.5rem; 
+    }
+}
